@@ -1,2 +1,2 @@
 # Clock
-a project that displays time with graphics
+a project that displays time with great styling
