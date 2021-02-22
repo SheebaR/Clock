@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+<!--         <link rel="stylesheet" href="mystyle.css">-->
+    </head>
+    <title>Clock</title>
+    <body class="green lighten-4">
+        <div class="row" style="margin-top: 10%">
+            <div class="col l3 offset-l1 m6 s12">
+                <div class="card-panel center pink accent-1 white-text" style="font-family: 'Reggae One', cursive;">
+                    <h3>Hour</h3>  
+                    <span style="font-size: 8rem" id="hour"></span>
+                </div>
+                
+            </div>
+            <div class="col l4 m6 s12">
+                <div class="card-panel center pink accent-1 white-text" style="font-family: 'Reggae One', cursive;">
+                   <h3>Minute</h3>  
+                   <span style="font-size: 8rem" id="minute"></span>
+                </div>
+                
+            </div>
+            <div class="col l3 m6 s12">
+                <div class="card-panel center pink accent-1 white-text" style="font-family: 'Reggae One', cursive;">
+                    <h3>Second</h3> 
+                    <span style="font-size: 8rem" id="second"></span>
+                </div>
+            </div>
+        </div>  
+        <script>
+           // window.addEventListener("DOMContentLoader",settime);
+           settime();
+            hour=document.getElementById("hour");
+            minute=document.getElementById("minute");
+            second=document.getElementById("second");
+            function settime()
+            {
+                var d = new Date();
+                h=d.getHours();
+                m=d.getMinutes();
+                s=d.getSeconds();
+                hour.innerText=h;
+                minute.innerText=m;
+                second.innerText=s;
+            }
+            setInterval(settime,1000)//1 sec=1000ms
+        </script>
+    </body>
+
